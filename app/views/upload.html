@@ -1,0 +1,75 @@
+{{extend '../templetes/base.html'}}
+
+{{block 'title'}}{{ pageTitle }}{{ /block }}
+
+
+{{block 'head'}}
+  <link rel="stylesheet" href="/static/css/normalize.css" />
+  <link rel="stylesheet" href="/static/css/upload.css" />
+  <script src="/static/js/jquery-3.2.1.min.js"></script>
+  <script src="/static/js/upload/main.js"></script>
+{{/block}}
+
+
+{{block 'content'}}
+<div class="app" id="app">
+
+	<div class="upload">
+		<!-- S drag -->
+		<div class="upload__drag js-upload-drag">            
+			<div class="upload__holdplace">
+				<div class="upload__icon">
+					<svg class="Zi Zi--BackToTop" fill="currentColor" viewBox="0 0 24 24" width="70" height="70"><path d="M16.036 19.59a1 1 0 0 1-.997.995H9.032a.996.996 0 0 1-.997-.996v-7.005H5.03c-1.1 0-1.36-.633-.578-1.416L11.33 4.29a1.003 1.003 0 0 1 1.412 0l6.878 6.88c.782.78.523 1.415-.58 1.415h-3.004v7.005z"></path></svg>
+				</div>
+				<div class="upload__picker">
+					<div class="upload__pick">选择要上传的文件</div>					
+				</div>
+				<div class="upload__tip">或将文件拖到这里上传</div>
+			</div>
+			<div class="upload__input">
+				<input type="file" name="file" class="js-uploader" multiple="multiple" accept="*" />
+			</div>
+		</div>
+		<!-- E drag -->
+
+
+		<!-- S file__list -->
+		<div class="file__list">
+			<!-- <div class="file__list__header">
+				<div data-key="name">文件名</div>
+				<div data-key="size">大小</div>
+				<div data-key="time">修改日期</div>
+				<div data-key="result">结果</div>
+			</div>
+			<div class="file__list__body">
+				<div class="file__item">
+					<div class="file__icon" data-type="rar"></div>
+					<div class="file__name">Office 2013 64位 程序与激活工具下载.rar</div>
+					<div class="file__size">41KB</div>
+					<div class="file__time">2012-09-03 10:41</div>
+					<div class="file__result" data-result="success">成功</div>
+					<span class="file__progress" style="width: 10%;"></span>
+				</div>
+				<div class="file__item">
+						<div class="file__icon" data-type="pdf"></div>
+					<div class="file__name"><span>[点石成金：访客至上的网页设计秘笈.pdf</div>
+					<div class="file__size">41KB</div>
+					<div class="file__time">2012-09-03 10:41</div>
+					<div class="file__result" data-result="fail">失败</div>
+					<span class="file__progress" style="width: 80%;"></span>
+				</div>
+				<div class="file__item">
+					<div class="file__icon" data-type="txt"></div>
+					<div class="file__name">网站模式.doc</div>
+					<div class="file__size">41KB</div>
+					<div class="file__time">2012-09-03 10:41</div>
+					<div class="file__result" data-result="success">成功</div>
+					<span class="file__progress" style="width: 0%;"></span>
+				</div> -->
+			</div>
+		</div>
+		<!-- E file-list
+	</div>
+
+</div>
+{{/block}}

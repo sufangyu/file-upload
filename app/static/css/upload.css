@@ -1,0 +1,199 @@
+.app {
+  margin: 0 auto;
+  width: 640px;
+}
+
+
+.upload {
+  margin: 15px;
+}
+.upload * {
+  margin: 0;
+  padding: 0;
+}
+
+.upload__drag {
+  border: 2px dashed #e7eaf1;
+  border-radius: 10px;
+  text-align: center;
+  padding: 35px 15px;
+  transition: border-color 0.25s linear;
+  cursor: pointer;
+  position: relative;
+}
+.upload__drag.active {
+  border-color: #8590a6;
+}
+.upload__icon {
+  color: #e7eaf1;
+  transition: color 0.25s linear;
+}
+.upload__drag:hover .upload__icon {
+  color: #8590a6;
+}
+.upload__holdplace {
+  color: #cccccc;
+  font-size: 16px;
+  position: relative;
+}
+.upload__picker {
+  color: #333;
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+}
+.upload__tip {
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: #8590a6;
+}
+.upload__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  bottom: auto;
+  right: auto;
+}
+.upload__input input {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.upload__input label {
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+}
+
+
+.empty {
+  color: #999;
+  font-size: 13px;
+  text-align: center;
+  padding: 15px;
+}
+
+.file__list {
+  margin-top: 25px;
+}
+.file__list__header {
+  border-top-color: #fff;
+  height: 36px;
+  line-height: 36px;
+  color: #888;
+  overflow: hidden;
+  padding: 0;
+  border-bottom: 1px solid #f2f6fd;
+  font-size: 0;
+}
+.file__list__header > div {
+  display: inline-block;
+  font-size: 13px;
+}
+.file__list__header > div[data-key="name"] {
+  width: 55%;
+}
+.file__list__header > div[data-key="size"] {
+  width: 15%;
+}
+.file__list__header > div[data-key="time"] {
+  width: 20%;
+}
+.file__list__header > div[data-key="result"] {
+  width: 10%;
+  text-align: center;
+}
+
+.file__item {
+  position: relative;
+  height: 44px;
+  line-height: 44px;
+  border-bottom: 1px solid #f2f6fd;
+  background: #FFF;
+  border-bottom: 1px solid #f2f6fd;
+}
+.file__item > div {
+  float: left;
+  font-size: 12px;
+  position: relative;
+  z-index: 11;
+}
+.file__name {
+  width: 55%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  padding-right: 10px;
+  padding-left: 35px;
+  position: relative;
+}
+.file__icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute !important;
+  left: 0;
+  top: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.file__icon[data-type="doc"] {
+  background-image: url(../images/icon-file-doc.png);
+}
+.file__icon[data-type="pdf"] {
+  background-image: url(../images/icon-file-pdf.png);
+}
+.file__icon[data-type="zip"],
+.file__icon[data-type="rar"] {
+  background-image: url(../images/icon-file-zip.png);
+}
+.file__icon[data-type="txt"] {
+  background-image: url(../images/icon-file-txt.png);
+}
+
+.file__size {
+  width: 15%;
+  font-size: 13px;
+  color: #808080;
+}
+.file__time {
+  width: 20%;
+  color: #808080;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.file__result {
+  width: 10%;
+  text-align: center;
+}
+.file__result[data-result="fail"] {
+  color: #f30;
+}
+.file__result[data-result="cancled"] {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.file__progress {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(124, 157, 248, 0.15);
+}
+
